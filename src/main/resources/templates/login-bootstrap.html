@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <div id="loginbox" style="margin-top: 50px;" class="col-md-3 col-md-offset-2 col-sm-6 col-sm-offset-2">
-            <div class="card border-dark">
+            <div class="card border-secondary">
                 <div class="card-header text-bg-primary">
                     ABC Company Login
                 </div>
@@ -31,6 +31,12 @@
                                         <div th:if="${param.error}">
                                             <div class="alert alert-danger col-xs-offset-1 col-xs-10">
                                                 Invalid username or password.
+                                            </div>
+                                        </div>
+                                        <!-- Check for logout -->
+                                        <div th:if="${param.logout}">
+                                            <div class="alert alert-danger col-xs-offset-1 col-xs-10">
+                                                You have been logged out.
                                             </div>
                                         </div>
                                     </div>
