@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <title>Systems</title>
+</head>
+
+<body>
+    <h2>ABC Company Page</h2>
+    <hr>
+    <p>Welcome to ABC company ADMIN Meet ONLY.</p>
+    <hr>
+    User: <span sec:authentication="principal.username"></span>
+    <br>
+    Role/s: <span sec:authentication="principal.authorities"></span>
+    <hr>
+    <br><br>
+    <a th:href="@{/}">Return to Home Page</a>
+</body>
+
+</html>
